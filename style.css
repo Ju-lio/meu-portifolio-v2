@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --primarycolor: #2e2e2e;
+  --secundarycolor: #808080;
+  --backgroundcolor: #d9d9d9;
+  --hovercolor: #4a4a4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px); /* Começa acima do ponto final */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Chega na posição final */
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+body {
+  background-color: var(--backgroundcolor);
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--primarycolor);
+}
+
+header {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 650px;
+  height: 330px;
+  z-index: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.j-logo {
+  z-index: 1;
+  margin: 25px 0 10px 0;
+}
+
+.j-shape {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  z-index: 0;
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.titulo h2 {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--secundarycolor);
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--secundarycolor);
+}
+
+.contatos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  z-index: 1;
+  width: 100%;
+}
+
+.contato-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primarycolor);
+}
+
+.contato-item-icon-light {
+  background-color: var(--backgroundcolor);
+}
+
+.buttons {
+  display: grid;
+
+  grid-template-columns: 2fr 2fr;
+  gap: 25px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+}
+
+.button {
+  position: relative;
+  width: 265px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.button h2 {
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.button svg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.button svg path {
+  stroke: var(--primarycolor);
+}
+
+.background-button {
+  fill: var(--primarycolor);
+}
+
+.button:hover h2 {
+  color: var(--hovercolor);
+}
+.button:hover .background-button {
+  fill: var(--hovercolor);
+}
+.button:hover svg path {
+  stroke: var(--hovercolor);
+}
